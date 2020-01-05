@@ -1,0 +1,191 @@
+.max-lines {
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-height: 3.6em;
+    line-height: 1.8em;
+}
+
+.table .thead-light [sort]::after
+{
+    margin-left: .25rem; 
+
+    content: url('data:image/svg+xml;utf8,<svg width=\'6\' height=\'10\' viewBox=\'0 0 6 10\' fill=\'none\' xmlns=\'http://www.w3.org/2000/svg\'><path fill-rule=\'evenodd\' clip-rule=\'evenodd\' d=\'M3 0L6 4H0L3 0ZM3 10L0 6H6L3 10Z\' fill=\'%238898aa\'/></svg>');
+}
+
+/***
+	Bootstrap dropdown container fix
+	for Bootstrap 4 and Material Design Bootstrap
+	Hint : Move out the button or the link declaring the data-toggle="dropdwn" from the .dropdown div
+	Created a dropdown-sm class for smaller dropdowns when using kebabs
+***/
+
+.dropdown-menu.dropdown-unroll {
+    transition: none;
+}
+
+.kebab-link i {
+    font-size: 1.5rem;
+}
+
+.kebab-link i:active,
+.kebab-link i:hover {
+    color: #4285F4;
+}
+
+
+/*Try to delete this setting and you'll see the problem*/
+
+.kebab-dropdown {
+    position: absolute;
+}
+
+
+/* material design for dropdown */
+
+.dropdown-sm>.dropdown-menu>.dropdown-item {
+    padding: 5px;
+    margin-left: 0;
+}
+
+.dropdown-menu>.dropdown-item {
+    padding: 1rem;
+    margin-left: 0;
+}
+
+.dropdown-menu>.dropdown-item:hover {
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
+    color: white;
+    background: #4285F4;
+}
+
+
+/***
+	Bootstrap 4 Collapse Accordion full width clickable
+	from Jacob Lett : http://codepen.io/JacobLett/pen/GWqjPw 
+	with Material Design Bootstrap
+	enhenced by djibe
+	Just add the collapse-accordion class to the div wearing the role="tablist"
+ ***/
+
+.collapse-accordion>.card a[data-toggle=collapse] {
+    display: block;
+    padding: .75rem 1.25rem;
+}
+
+.collapse-accordion>.card a[data-toggle=collapse]:after {
+    /* symbol for "opening" panels */
+    font-family: FontAwesome;
+    font-size: .9rem;
+    content: "\f077";
+    /* adjust as needed, taken from bootstrap.css */
+    float: right;
+    /* adjust as needed */
+    vertical-align: middle;
+    color: grey;
+    /* adjust as needed */
+    transition: all .5s linear;
+    margin-right: 5%;
+}
+
+.collapse-accordion>.card a[data-toggle=collapse].collapsed:after {
+    content: "\f078";
+}
+
+.collapse-accordion>.card>.card-header {
+    padding: 0;
+}
+
+
+/* form starting stylings ------------------------------- */
+.group 			  { 
+    position:relative; 
+    margin-bottom:45px; 
+  }
+  input 				{
+    font-size:18px;
+    /* padding:10px 10px 10px 5px; */
+    /* display:block; */
+    /* width:200px; */
+    border:none;
+    border-bottom:1px solid #757575;
+  }
+  input:focus 		{ outline:none; }
+  
+  /* LABEL ======================================= */
+  label 				 {
+    color:#999; 
+    font-size:18px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:10px;
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+  }
+  
+  /* active state */
+  input:focus ~ label, input:valid ~ label 		{
+    top:-20px;
+    font-size:14px;
+    color:#5264AE;
+  }
+  
+  /* BOTTOM BARS ================================= */
+  .bar 	{ position:relative; display:block; width:300px; }
+  .bar:before, .bar:after 	{
+    content:'';
+    height:2px; 
+    width:0;
+    bottom:1px; 
+    position:absolute;
+    background:#5264AE; 
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+  }
+  .bar:before {
+    left:50%;
+  }
+  .bar:after {
+    right:50%; 
+  }
+  
+  /* active state */
+  input:focus ~ .bar:before, input:focus ~ .bar:after {
+    width:50%;
+  }
+  
+  /* HIGHLIGHTER ================================== */
+  .highlight {
+    position:absolute;
+    height:60%; 
+    width:100px; 
+    top:25%; 
+    left:0;
+    pointer-events:none;
+    opacity:0.5;
+  }
+  
+  /* active state */
+  input:focus ~ .highlight {
+    -webkit-animation:inputHighlighter 0.3s ease;
+    -moz-animation:inputHighlighter 0.3s ease;
+    animation:inputHighlighter 0.3s ease;
+  }
+  
+  /* ANIMATIONS ================ */
+  @-webkit-keyframes inputHighlighter {
+      from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+  }
+  @-moz-keyframes inputHighlighter {
+      from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+  }
+  @keyframes inputHighlighter {
+      from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+  }
