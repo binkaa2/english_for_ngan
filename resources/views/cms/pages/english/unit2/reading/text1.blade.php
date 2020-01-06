@@ -1,6 +1,6 @@
 @extends('cms.pages.layouts.layout')
 @section('content')
-<form style="display:contents" method="post" action="{{route('unit1.reading.text1_post')}}">
+<form style="display:contents" method="post" action="{{route('unit2.reading.text1_post')}}">
 @csrf 
 <div class="container">
         <div class="row" style="padding: 10px">
@@ -96,9 +96,9 @@
                         <div class="pt-2">
                             <h4>10. What could harm the livelihoods of people living on or near the sites?</h4>
                             <input type="radio" @if(session('cau10') == "a") checked="" @endif name="cau10" value="a">  <strong>A</strong> the weather<br>
-                            <input type="radio" @if(session('cau11') == "b") checked="" @endif name="cau10" value="b">  <strong>B</strong> <span class="dapan">non-stop development</span><br>
-                            <input type="radio" @if(session('cau12') == "c") checked="" @endif name="cau10" value="c">  <strong>C</strong> cars<br>
-                            <input type="radio" @if(session('cau13') == "d") checked="" @endif name="cau10" value="d">  <strong>D</strong> pandas
+                            <input type="radio" @if(session('cau10') == "b") checked="" @endif name="cau10" value="b">  <strong>B</strong> <span class="dapan">non-stop development</span><br>
+                            <input type="radio" @if(session('cau10') == "c") checked="" @endif name="cau10" value="c">  <strong>C</strong> cars<br>
+                            <input type="radio" @if(session('cau10') == "d") checked="" @endif name="cau10" value="d">  <strong>D</strong> pandas
                         </div>
 
                         <div class="pb-3"></div>
