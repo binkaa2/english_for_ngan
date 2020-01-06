@@ -77,7 +77,7 @@
     /* symbol for "opening" panels */
     font-family: FontAwesome;
     font-size: .9rem;
-    content: "\f077";
+    /* content: "\f077"; */
     /* adjust as needed, taken from bootstrap.css */
     float: right;
     /* adjust as needed */
@@ -89,7 +89,7 @@
 }
 
 .collapse-accordion>.card a[data-toggle=collapse].collapsed:after {
-    content: "\f078";
+    /* content: "\f078"; */
 }
 
 .collapse-accordion>.card>.card-header {

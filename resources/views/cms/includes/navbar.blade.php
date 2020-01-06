@@ -1,12 +1,12 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-white">
         <div class="container">
             <div>
-                <a class="navbar-brand" href="">
-                    <img class="logo animated animatedFadeInUp fadeInUp " src="images/navbar/logo.png" height="50px" />
-                </a>
+                <a class="" href="">
                 <span class="nav-logo-text animated animatedFadeInUp fadeInUp">
                     English for everyone <3
                 </span>
+                </a>
+               
             </div>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
