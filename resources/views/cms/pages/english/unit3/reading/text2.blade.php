@@ -81,7 +81,7 @@ Swal.fire({
   title: '<strong>Thông tin</strong>',
   icon: 'info',
   html:
-    'Bạn đã trả lời đúng <b>{{$temp}}</b>/<b>4</b>',
+    'Bạn đã trả lời đúng <b>{{$temp}}</b>/<b>5</b>',
   showCloseButton: true,
   showCancelButton: true,
   focusConfirm: false,
