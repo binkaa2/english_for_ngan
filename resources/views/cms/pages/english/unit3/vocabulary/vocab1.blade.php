@@ -1,5 +1,7 @@
 @extends('cms.pages.layouts.layout')
 @section('content')
+<form style="display:contents" method="post" action="{{route('unit3.vocabulary.vocab1_post')}}">
+@csrf
 <div class="container">
     <div class="row" style="padding: 10px">
         <div class="col-12">
@@ -171,51 +173,51 @@
                     <div class="pt-5 d-flex" style="    justify-content: space-between;">
                         <div class="d-flex">
                             <span><strong>1</strong> -  </span>
-                            <input width="30px"  style="width:30px;margin-left:0.5rem;" type="text">
+                            <input width="30px" name="cau1" id="cau1" value="{{session('cau1')}}" style="width:30px;margin-left:0.5rem;" type="text">
                         </div>
                         <div class="d-flex">
                             <span><strong>2</strong> -  </span>
-                            <input width="30px"  style="width:30px;margin-left:0.5rem;" type="text">
+                            <input width="30px" name="cau2" id="cau2" value="{{session('cau2')}}"  style="width:30px;margin-left:0.5rem;" type="text">
                         </div>
                         <div class="d-flex">
                             <span><strong>3</strong> -  </span>
-                            <input width="30px"  style="width:30px;margin-left:0.5rem;" type="text">
+                            <input width="30px" name="cau3" id="cau3" value="{{session('cau3')}}"  style="width:30px;margin-left:0.5rem;" type="text">
                         </div>
                         <div class="d-flex">
                             <span><strong>4</strong> -  </span>
-                            <input width="30px"  style="width:30px;margin-left:0.5rem;" type="text">
+                            <input width="30px" name="cau4" id="cau4" value="{{session('cau4')}}" style="width:30px;margin-left:0.5rem;" type="text">
                         </div>
                         <div class="d-flex">
                             <span><strong>5</strong> -  </span>
-                            <input width="30px"  style="width:30px;margin-left:0.5rem;" type="text">
+                            <input width="30px" name="cau5" id="cau5" value="{{session('cau5')}}"  style="width:30px;margin-left:0.5rem;" type="text">
                         </div>
                     </div>
                     <div class="pt-3 d-flex" style="    justify-content: space-between;">
                         <div class="d-flex">
                             <span><strong>6</strong> -  </span>
-                            <input width="30px"  style="width:30px;margin-left:0.5rem;" type="text">
+                            <input width="30px" name="cau6" id="cau6" value="{{session('cau6')}}"  style="width:30px;margin-left:0.5rem;" type="text">
                         </div>
                         <div class="d-flex">
                             <span><strong>7</strong> -  </span>
-                            <input width="30px"  style="width:30px;margin-left:0.5rem;" type="text">
+                            <input width="30px" name="cau7" id="cau7" value="{{session('cau7')}}"  style="width:30px;margin-left:0.5rem;" type="text">
                         </div>
                         <div class="d-flex">
                             <span><strong>8</strong> -  </span>
-                            <input width="30px"  style="width:30px;margin-left:0.5rem;" type="text">
+                            <input width="30px" name="cau8" id="cau8" value="{{session('cau8')}}"  style="width:30px;margin-left:0.5rem;" type="text">
                         </div>
                         <div class="d-flex">
                             <span><strong>9</strong> -  </span>
-                            <input width="30px"  style="width:30px;margin-left:0.5rem;" type="text">
+                            <input width="30px" name="cau9" id="cau9" value="{{session('cau9')}}" style="width:30px;margin-left:0.5rem;" type="text">
                         </div>
                         <div class="d-flex">
                             <span><strong>10</strong> -  </span>
-                            <input width="30px"  style="width:30px;margin-left:0.5rem;" type="text">
+                            <input width="30px" name="cau10" id="cau10" value="{{session('cau10')}}"  style="width:30px;margin-left:0.5rem;" type="text">
                         </div>
                     </div>
                     <div class="pb-5"></div>
                         <div class="row pt-4 pb-4">
                             <div class="col-4">
-                            <button class="btn btn-icon btn-secondary" type="button">
+                            <button class="btn btn-icon btn-secondary" type="submit">
                                 <span class="btn-inner--icon"><i class="ni ni-check-bold"></i></span>
                                 <span class="btn-inner--text">Check done</span>
                             </button>
@@ -240,4 +242,42 @@
 
         <!--row-->
     </div>
+    </form>
     @endsection
+
+    @section('script')
+@if(session('success'))
+@php $temp = session('success');$temp--; @endphp
+<script>
+Swal.fire({
+  title: '<strong>Thông tin</strong>',
+  icon: 'info',
+  html:
+    'Bạn đã trả lời đúng <b>{{$temp}}</b>/<b>10</b>',
+  showCloseButton: true,
+  showCancelButton: true,
+  focusConfirm: false,
+  confirmButtonText:
+    'Xem đáp án !',
+  confirmButtonAriaLabel: 'Thumbs up, great!',
+  cancelButtonText:
+    'Trả lời lại !',
+  cancelButtonAriaLabel: 'Thumbs down'
+}).then((result) => {
+  if (result.value) {
+    $('.dapan').css("color","red");
+    $('#cau1').val("H")
+    $('#cau2').val("F")
+    $('#cau3').val("G")
+    $('#cau4').val("E")
+    $('#cau5').val("A")
+    $('#cau6').val("C")
+    $('#cau7').val("J")
+    $('#cau8').val("B")
+    $('#cau9').val("D")
+    $('#cau10').val("I")
+  }
+})
+</script>
+@endif
+@endsection

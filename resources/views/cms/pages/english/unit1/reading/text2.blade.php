@@ -1,5 +1,8 @@
 @extends('cms.pages.layouts.layout')
 @section('content')
+<form style="display:contents" method="post" action="{{route('unit1.reading.text2_post')}}">
+@csrf
+
 <div class="container">
         <div class="row" style="padding: 10px">
            <div class="col-12">
@@ -59,50 +62,50 @@ However, New Zealand’s effort counts only a tip of the iceberg. So far, global
                         </div>
                         <div class="pt-2">
                             <h4>1. What happens when the ocean's temperature rises?</h4>
-                            <input type="radio" name="cau1" value="a">  <strong>A</strong> The temperature in the polar region will increase less than that in New Zealand in the next century.<br>
-                            <input type="radio" name="cau1" value="b">  <strong>B</strong> The weather and climate of New Zealand is very important to its people because of its close location to the polar region.<br>
-                            <input type="radio" name="cau1" value="c">  <strong>C</strong> The air condition in New Zealand will maintain a high quality because of the ocean.<br>
-                            <input type="radio" name="cau1" value="d">  <strong>D</strong> The temperature of New Zealand will increase less than that of other region in the next 100 years because it is surrounded by sea.
+                            <input type="radio" name="cau1" @if(session('cau1') == "a") checked="" @endif value="a">  <strong>A</strong> The temperature in the polar region will increase less than that in New Zealand in the next century.<br>
+                            <input type="radio" name="cau1" @if(session('cau1') == "b") checked="" @endif value="b">  <strong>B</strong> The weather and climate of New Zealand is very important to its people because of its close location to the polar region.<br>
+                            <input type="radio" name="cau1" @if(session('cau1') == "c") checked="" @endif value="c">  <strong>C</strong> The air condition in New Zealand will maintain a high quality because of the ocean.<br>
+                            <input type="radio" name="cau1" @if(session('cau1') == "d") checked="" @endif value="d">  <strong>D</strong> <span class="dapan">The temperature of New Zealand will increase less than that of other region in the next 100 years because it is surrounded by sea.</span>
                         </div>
 
                         <div class="pt-2">
                             <h4>2. What is one effect of the wind belt that circles the Southern Oceans?</h4>
-                            <input type="radio" name="cau2" value="a">  <strong>A</strong> New Zealand will have more moisture in winds in summer.<br>
-                            <input type="radio" name="cau2" value="b">  <strong>B</strong> New Zealand needs to face droughts more often in hotter months in a year.<br>
-                            <input type="radio" name="cau2" value="c">  <strong>C</strong> Soil water will increase as a result of weakening moisture in the winds<br>
-                            <input type="radio" name="cau2" value="d">  <strong>D</strong> Agricultural production will be reduced as a result of more rainfall in other seasons.
+                            <input type="radio" name="cau2" @if(session('cau2') == "a") checked="" @endif value="a">  <strong>A</strong> New Zealand will have more moisture in winds in summer.<br>
+                            <input type="radio" name="cau2" @if(session('cau2') == "b") checked="" @endif value="b">  <strong>B</strong> <span class="dapan">New Zealand needs to face droughts more often in hotter months in a year.</span><br>
+                            <input type="radio" name="cau2" @if(session('cau2') == "c") checked="" @endif value="c">  <strong>C</strong> Soil water will increase as a result of weakening moisture in the winds<br>
+                            <input type="radio" name="cau2" @if(session('cau2') == "d") checked="" @endif value="d">  <strong>D</strong> Agricultural production will be reduced as a result of more rainfall in other seasons.
                         </div>
 
                         <div class="pt-2">
                             <h4>3. What does “moisture deficit” mean to the grain and crops?</h4>
-                            <input type="radio" name="cau2" value="a">  <strong>A</strong> The growing condition will be very tough for crops.<br>
-                            <input type="radio" name="cau2" value="b">  <strong>B</strong> The growing season of some plants can hardly be determined.<br>
-                            <input type="radio" name="cau2" value="c">  <strong>C</strong> There will be a huge gap between the water plants needed and the water the earth can offer.<br>
-                            <input type="radio" name="cau2" value="d">  <strong>D</strong> The soil of the grain and crops in New Zealand reached its lowest production since 1970s.
+                            <input type="radio" name="cau3" @if(session('cau3') == "a") checked="" @endif  value="a">  <strong>A</strong> <span class="dapan">The growing condition will be very tough for crops.</span><br>
+                            <input type="radio" name="cau3" @if(session('cau3') == "b") checked="" @endif  value="b">  <strong>B</strong> The growing season of some plants can hardly be determined.<br>
+                            <input type="radio" name="cau3" @if(session('cau3') == "c") checked="" @endif value="c">  <strong>C</strong> There will be a huge gap between the water plants needed and the water the earth can offer.<br>
+                            <input type="radio" name="cau3" @if(session('cau3') == "d") checked="" @endif value="d">  <strong>D</strong> The soil of the grain and crops in New Zealand reached its lowest production since 1970s.
                         </div>
 
                         <div class="pt-2">
                             <h4>4. What changes will happen to skiing industry due to the global warming phenomenon?</h4>
-                            <input type="radio" name="cau2" value="a">  <strong>A</strong> The skiing station may lower the altitude of skiing<br>
-                            <input type="radio" name="cau2" value="b">  <strong>B</strong> Part of the skiing station needs to move to the north.<br>
-                            <input type="radio" name="cau2" value="c">  <strong>C</strong> The snowfall may increase in part of skiing station.<br>
-                            <input type="radio" name="cau2" value="d">  <strong>D</strong> The local skiing station may likely to make a profit because of the snowfall increase.
+                            <input type="radio" name="cau4" @if(session('cau4') == "a") checked="" @endif value="a">  <strong>A</strong> The skiing station may lower the altitude of skiing<br>
+                            <input type="radio" name="cau4" @if(session('cau4') == "b") checked="" @endif value="b">  <strong>B</strong> Part of the skiing station needs to move to the north.<br>
+                            <input type="radio" name="cau4" @if(session('cau4') == "c") checked="" @endif value="c">  <strong>C</strong> <span class="dapan">The snowfall may increase in part of skiing station.</span><br>
+                            <input type="radio" name="cau4" @if(session('cau4') == "d") checked="" @endif value="d">  <strong>D</strong> The local skiing station may likely to make a profit because of the snowfall increase.
                         </div>
 
                         <div class="pt-2">
                             <h4>5. Cumulative changes over a long period of time in mass balance will lead to</h4>
-                            <input type="radio" name="cau2" value="a">  <strong>A</strong> Alterations is the volume and thickness of glaciers.<br>
-                            <input type="radio" name="cau2" value="b">  <strong>B</strong> Faster changes in internal deformation and basal sliding.<br>
-                            <input type="radio" name="cau2" value="c">  <strong>C</strong> Larger length of glaciers.<br>
-                            <input type="radio" name="cau2" value="d">  <strong>D</strong> Retreat of glacier tongues as a result of change in annual atmospheric conditions.
+                            <input type="radio" name="cau5" @if(session('cau5') == "a") checked="" @endif value="a">  <strong>A</strong> <span class="dapan">Alterations is the volume and thickness of glaciers.</span><br>
+                            <input type="radio" name="cau5" @if(session('cau5') == "b") checked="" @endif value="b">  <strong>B</strong> Faster changes in internal deformation and basal sliding.<br>
+                            <input type="radio" name="cau5" @if(session('cau5') == "c") checked="" @endif value="c">  <strong>C</strong> Larger length of glaciers.<br>
+                            <input type="radio" name="cau5" @if(session('cau5') == "d") checked="" @endif value="d">  <strong>D</strong> Retreat of glacier tongues as a result of change in annual atmospheric conditions.
                         </div>
 
                         <div class="pt-2 pb-3">
                             <h4>6. Why does the writer mention NIWA in the sixth paragraph?</h4>
-                            <input type="radio" name="cau2" value="a">  <strong>A</strong> To use a particular example to explain the effects brought by glacier melting.<br>
-                            <input type="radio" name="cau2" value="b">  <strong>B</strong> To emphasize the severance of the further loss of ice in Mt. Cook Region.<br>
-                            <input type="radio" name="cau2" value="c">  <strong>C</strong> To alarm the reader of melting speed of glaciers at a uniform rate.<br>
-                            <input type="radio" name="cau2" value="d">  <strong>D</strong> To note the lake in the region will be disappear when it reach the glacier bed.
+                            <input type="radio" name="cau6" @if(session('cau6') == "a") checked="" @endif value="a">  <strong>A</strong> <span class="dapan">To use a particular example to explain the effects brought by glacier melting.</span><br>
+                            <input type="radio" name="cau6" @if(session('cau6') == "b") checked="" @endif value="b">  <strong>B</strong> To emphasize the severance of the further loss of ice in Mt. Cook Region.<br>
+                            <input type="radio" name="cau6" @if(session('cau6') == "c") checked="" @endif value="c">  <strong>C</strong> To alarm the reader of melting speed of glaciers at a uniform rate.<br>
+                            <input type="radio" name="cau6" @if(session('cau6') == "d") checked="" @endif value="d">  <strong>D</strong> To note the lake in the region will be disappear when it reach the glacier bed.
                         </div>
 
                         <div class="pt-5">
@@ -117,7 +120,7 @@ However, New Zealand’s effort counts only a tip of the iceberg. So far, global
                         <div class="pt-2">
                             <div>
                             Research date shows that sea level has a closely relation with the change of climate. The major reason for the increase in sea level is connected with 
-                           (7) <span><input width=200 type="text" required></span> The increase in sea level is also said to have a threat to the underground water system, the destruction of which caused by rise of sea level will lead to a high probability of reduction in  (8) <span><input type="text" required></span> . In the long run, New Zealand may have to improve the (9) <span><input width=200 type="text" required></span>    if they want to diminish the effect change in sea levels.
+                           (7) <span><input width=200 type="text" id="cau7" name="cau7" value="{{session('cau7')}}"></span> The increase in sea level is also said to have a threat to the underground water system, the destruction of which caused by rise of sea level will lead to a high probability of reduction in  (8) <span><input type="text" name="cau8" id="cau8" value="{{session('cau8')}}" ></span> . In the long run, New Zealand may have to improve the (9) <span><input width=200 type="text" name="cau9" id="cau9" value="{{session('cau9')}}" ></span>    if they want to diminish the effect change in sea levels.
                             </div>
                         </div>
 
@@ -138,16 +141,16 @@ However, New Zealand’s effort counts only a tip of the iceberg. So far, global
                         </div>
                         <div class="d-flex" style="justify-content:space-around">
                             <div class="custom-control custom-radio">
-                                <input name="cau10" class="custom-control-input" value="yes" id="cau10-yes" type="radio">
+                                <input name="cau10" name="cau6" @if(session('cau10') == "yes") checked="" @endif class="custom-control-input" value="yes" id="cau10-yes" type="radio">
                                 <label class="custom-control-label" for="cau10-yes">YES</label>
                             </div>
                             <div class="custom-control custom-radio">
-                                <input name="cau10" class="custom-control-input" value="no" id="cau10-no" type="radio">
+                                <input name="cau10" class="custom-control-input" @if(session('cau10') == "no") checked="" @endif value="no" id="cau10-no" type="radio">
                                 <label class="custom-control-label" for="cau10-no">NO</label>
                             </div>
                             <div class="custom-control custom-radio">
-                                <input name="cau10" class="custom-control-input" value="not_given" id="cau10-not-given" type="radio">
-                                <label class="custom-control-label" for="cau10-not-given">NOT GIVEN</label>
+                                <input name="cau10" class="custom-control-input" @if(session('cau10') == "not_given") checked="" @endif value="not_given" id="cau10-not-given" type="radio">
+                                <label class="custom-control-label dapan" for="cau10-not-given">NOT GIVEN</label>
                             </div>
                         </div>
 
@@ -156,16 +159,16 @@ However, New Zealand’s effort counts only a tip of the iceberg. So far, global
                         </div>
                         <div class="d-flex" style="justify-content:space-around">
                             <div class="custom-control custom-radio">
-                                <input name="cau11" class="custom-control-input" id="cau11-yes" type="radio">
+                                <input name="cau11" value="yes" @if(session('cau11') == "yes") checked="" @endif class="custom-control-input" id="cau11-yes" type="radio">
                                 <label class="custom-control-label" for="cau11-yes">YES</label>
                             </div>
                             <div class="custom-control custom-radio">
-                                <input name="cau11" class="custom-control-input" id="cau11-no" type="radio">
+                                <input name="cau11" class="custom-control-input" value="no" @if(session('cau11') == "no") checked="" @endif id="cau11-no" type="radio">
                                 <label class="custom-control-label" for="cau11-no">NO</label>
                             </div>
                             <div class="custom-control custom-radio">
-                                <input name="cau11" class="custom-control-input" id="cau11-not-given" type="radio">
-                                <label class="custom-control-label" for="cau11-not-given">NOT GIVEN</label>
+                                <input name="cau11" class="custom-control-input" @if(session('cau11') == "not_given") checked="" @endif id="cau11-not-given" type="radio">
+                                <label class="custom-control-label dapan" for="cau11-not-given">NOT GIVEN</label>
                             </div>
                         </div>
 
@@ -174,15 +177,15 @@ However, New Zealand’s effort counts only a tip of the iceberg. So far, global
                         </div>
                         <div class="d-flex" style="justify-content:space-around">
                             <div class="custom-control custom-radio">
-                                <input name="cau12" class="custom-control-input" id="cau12-yes" type="radio">
+                                <input name="cau12" value="yes" @if(session('cau12') == "yes") checked="" @endif class="custom-control-input" id="cau12-yes" type="radio">
                                 <label class="custom-control-label" for="cau12-yes">YES</label>
                             </div>
                             <div class="custom-control custom-radio">
-                                <input name="cau12" class="custom-control-input" id="cau12-no" type="radio">
-                                <label class="custom-control-label" for="cau12-no">NO</label>
+                                <input name="cau12" value="no" class="custom-control-input" @if(session('cau12') == "no") checked="" @endif id="cau12-no" type="radio">
+                                <label class="custom-control-label dapan" for="cau12-no">NO</label>
                             </div>
                             <div class="custom-control custom-radio">
-                                <input name="cau12" class="custom-control-input" id="cau12-not-given" type="radio">
+                                <input name="cau12" class="custom-control-input" value="not_given"  @if(session('cau12') == "not_given") checked="" @endif id="cau12-not-given" type="radio">
                                 <label class="custom-control-label" for="cau12-not-given">NOT GIVEN</label>
                             </div>
                         </div>
@@ -192,15 +195,15 @@ However, New Zealand’s effort counts only a tip of the iceberg. So far, global
                         </div>
                         <div class="d-flex" style="justify-content:space-around">
                             <div class="custom-control custom-radio">
-                                <input name="cau13" class="custom-control-input" id="cau13-yes" type="radio">
-                                <label class="custom-control-label" for="cau13-yes">YES</label>
+                                <input name="cau13" class="custom-control-input" @if(session('cau12') == "yes") checked="" @endif value="yes" id="cau13-yes" type="radio">
+                                <label class="custom-control-label dapan" for="cau13-yes">YES</label>
                             </div>
                             <div class="custom-control custom-radio">
-                                <input name="cau13" class="custom-control-input" id="cau13-no" type="radio">
+                                <input name="cau13" class="custom-control-input" @if(session('cau12') == "no") checked="" @endif value="no" id="cau13-no" type="radio">
                                 <label class="custom-control-label" for="cau13-no">NO</label>
                             </div>
                             <div class="custom-control custom-radio">
-                                <input name="cau13" class="custom-control-input" id="cau13-not-given" type="radio">
+                                <input name="cau13" class="custom-control-input" @if(session('cau12') == "not_given") checked="" @endif value="not_given" id="cau13-not-given" type="radio">
                                 <label class="custom-control-label" for="cau13-not-given">NOT GIVEN</label>
                             </div>
                         </div>
@@ -210,15 +213,15 @@ However, New Zealand’s effort counts only a tip of the iceberg. So far, global
                         </div>
                         <div class="d-flex" style="justify-content:space-around">
                             <div class="custom-control custom-radio">
-                                <input name="cau14" class="custom-control-input" id="cau14-yes" type="radio">
+                                <input name="cau14" class="custom-control-input" @if(session('cau14') == "yes") checked="" @endif value="yes" id="cau14-yes" type="radio">
                                 <label class="custom-control-label" for="cau14-yes">YES</label>
                             </div>
                             <div class="custom-control custom-radio">
-                                <input name="cau14" class="custom-control-input" id="cau14-no" type="radio">
-                                <label class="custom-control-label" for="cau14-no">NO</label>
+                                <input name="cau14" class="custom-control-input" @if(session('cau14') == "no") checked="" @endif value="no" id="cau14-no" type="radio">
+                                <label class="custom-control-label dapan" for="cau14-no">NO</label>
                             </div>
                             <div class="custom-control custom-radio">
-                                <input name="cau14" class="custom-control-input" id="cau14-not-given" type="radio">
+                                <input name="cau14" class="custom-control-input" @if(session('cau14') == "not_given") checked="" @endif value="not_given" id="cau14-not-given" type="radio">
                                 <label class="custom-control-label" for="cau14-not-given">NOT GIVEN</label>
                             </div>
                         </div>
@@ -227,7 +230,7 @@ However, New Zealand’s effort counts only a tip of the iceberg. So far, global
                         <div class="pb-3"></div>
                         <div class="row pt-4 pb-2">
                             <div class="col-4">
-                            <button class="btn btn-icon btn-secondary" type="button">
+                            <button class="btn btn-icon btn-secondary" type="submit">
                                 <span class="btn-inner--icon"><i class="ni ni-check-bold"></i></span>
                                 <span class="btn-inner--text">Check done</span>
                             </button>
@@ -252,4 +255,35 @@ However, New Zealand’s effort counts only a tip of the iceberg. So far, global
             
             <!--row-->
         </div>
+</form>
+@endsection
+
+@section('script')
+@if(session('success'))
+@php $temp = session('success');$temp--; @endphp
+<script>
+Swal.fire({
+  title: '<strong>Thông tin</strong>',
+  icon: 'info',
+  html:
+    'Bạn đã trả lời đúng <b>{{$temp}}</b>/<b>14</b>',
+  showCloseButton: true,
+  showCancelButton: true,
+  focusConfirm: false,
+  confirmButtonText:
+    'Xem đáp án !',
+  confirmButtonAriaLabel: 'Thumbs up, great!',
+  cancelButtonText:
+    'Trả lời lại !',
+  cancelButtonAriaLabel: 'Thumbs down'
+}).then((result) => {
+  if (result.value) {
+    $('.dapan').css("color","red");
+    $('#cau7').val('high tides');
+    $('#cau8').val('agricultural production');
+    $('#cau9').val('coastal boundaries')
+  }
+})
+</script>
+@endif
 @endsection

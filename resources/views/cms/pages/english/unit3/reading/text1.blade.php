@@ -1,5 +1,7 @@
 @extends('cms.pages.layouts.layout')
 @section('content')
+<form style="display:contents" method="post" action="{{route('unit3.reading.text1_post')}}">
+@csrf
 <div class="container">
         <div class="row" style="padding: 10px">
            <div class="col-12">
@@ -42,167 +44,167 @@ backward sort of thinking,” he said.
                         <div class="pt-2 row">
                             <h4 class="col-2" style="max-width:8%">1. </h4>
                             <div class="col-2">
-                            <input type="radio" name="cau1" value="a">  <strong>(a)</strong>  with<br>
+                            <input type="radio" name="cau1" @if(session('cau1') == "a") checked="" @endif value="a">  <strong>(a)</strong>  with<br>
                             </div>
                             <div class="col-2">
-                            <input type="radio" name="cau1" value="a">  <strong>(b)</strong>  at<br>
+                            <input type="radio" name="cau1" @if(session('cau1') == "b") checked="" @endif value="b">  <strong>(b)</strong>  at<br>
                             </div>
                             <div class="col-2">
-                            <input type="radio" name="cau1" value="a">  <strong>(c)</strong>  on<br>
+                            <input type="radio" name="cau1" @if(session('cau1') == "c") checked="" @endif value="c">  <strong>(c)</strong>  on<br>
                             </div>
                             <div class="col-2">
-                            <input type="radio" name="cau1" value="a">  <strong>(d)</strong>  in<br>
+                            <input type="radio" name="cau1" @if(session('cau1') == "d") checked="" @endif value="d">  <span class="dapan"><strong>(d)</strong>  in</span><br>
                             </div>
                         </div>
 
                         <div class="pt-2 row">
                             <h4 class="col-2" style="max-width:8%">2. </h4>
                             <div class="col-2">
-                            <input type="radio" name="cau1" value="a">  <strong>(a)</strong>  numeric<br>
+                            <input type="radio" name="cau2" @if(session('cau2') == "a") checked="" @endif value="a">  <strong>(a)</strong>  numeric<br>
                             </div>
                             <div class="col-2">
-                            <input type="radio" name="cau1" value="a">  <strong>(b)</strong>  numeral<br>
+                            <input type="radio" name="cau2" @if(session('cau2') == "b") checked="" @endif value="b">  <strong>(b)</strong>  numeral<br>
                             </div>
                             <div class="col-2">
-                            <input type="radio" name="cau1" value="a">  <strong>(c)</strong>  outnumber<br>
+                            <input type="radio" name="cau2" @if(session('cau2') == "c") checked="" @endif value="c">  <span class="dapan"><strong>(c)</strong>  outnumber</span><br>
                             </div>
                             <div class="col-2">
-                            <input type="radio" name="cau1" value="a">  <strong>(d)</strong>  numb<br>
+                            <input type="radio" name="cau2" @if(session('cau2') == "d") checked="" @endif value="d">  <strong>(d)</strong>  numb<br>
                             </div>
                         </div>
 
                         <div class="pt-2 row">
                             <h4 class="col-2" style="max-width:8%">3. </h4>
                             <div class="col-2">
-                            <input type="radio" name="cau1" value="a">  <strong>(a)</strong>  tragedy<br>
+                            <input type="radio" name="cau3" @if(session('cau3') == "a") checked="" @endif  value="a">  <strong>(a)</strong>  tragedy<br>
                             </div>
                             <div class="col-2">
-                            <input type="radio" name="cau1" value="a">  <strong>(b)</strong>  tragic<br>
+                            <input type="radio" name="cau3" @if(session('cau3') == "b") checked="" @endif value="b">  <span class="dapan"><strong>(b)</strong>  tragic</span><br>
                             </div>
                             <div class="col-2">
-                            <input type="radio" name="cau1" value="a">  <strong>(c)</strong>  tragically<br>
+                            <input type="radio" name="cau3" @if(session('cau3') == "c") checked="" @endif value="c">  <strong>(c)</strong>  tragically<br>
                             </div>
                             <div class="col-2">
-                            <input type="radio" name="cau1" value="a">  <strong>(d)</strong>  tragedies<br>
+                            <input type="radio" name="cau3" @if(session('cau3') == "d") checked="" @endif value="d">  <strong>(d)</strong>  tragedies<br>
                             </div>
                         </div>
 
                         <div class="pt-2 row">
                             <h4 class="col-2" style="max-width:8%">4. </h4>
                             <div class="col-2">
-                            <input type="radio" name="cau1" value="a">  <strong>(a)</strong>  least<br>
+                            <input type="radio" name="cau4" @if(session('cau4') == "a") checked="" @endif value="a">  <span class="dapan"><strong>(a)</strong>  least</span><br>
                             </div>
                             <div class="col-2">
-                            <input type="radio" name="cau1" value="a">  <strong>(b)</strong>  lost<br>
+                            <input type="radio" name="cau4" @if(session('cau4') == "b") checked="" @endif value="b">  <strong>(b)</strong>  lost<br>
                             </div>
                             <div class="col-2">
-                            <input type="radio" name="cau1" value="a">  <strong>(c)</strong>  last<br>
+                            <input type="radio" name="cau4" @if(session('cau4') == "c") checked="" @endif value="c">  <strong>(c)</strong>  last<br>
                             </div>
                             <div class="col-2">
-                            <input type="radio" name="cau1" value="a">  <strong>(d)</strong>  lest<br>
+                            <input type="radio" name="cau4" @if(session('cau4') == "d") checked="" @endif value="d">  <strong>(d)</strong>  lest<br>
                             </div>
                         </div>
 
                         <div class="pt-2 row">
                             <h4 class="col-2" style="max-width:8%">5. </h4>
                             <div class="col-2">
-                            <input type="radio" name="cau1" value="a">  <strong>(a)</strong>  did<br>
+                            <input type="radio" name="cau5" @if(session('cau5') == "a") checked="" @endif value="a">  <strong>(a)</strong>  did<br>
                             </div>
                             <div class="col-2">
-                            <input type="radio" name="cau1" value="a">  <strong>(b)</strong>  was<br>
+                            <input type="radio" name="cau5" @if(session('cau5') == "b") checked="" @endif value="b">  <strong>(b)</strong>  was<br>
                             </div>
                             <div class="col-2">
-                            <input type="radio" name="cau1" value="a">  <strong>(c)</strong>  has<br>
+                            <input type="radio" name="cau5" @if(session('cau5') == "c") checked="" @endif value="c">  <span class="dapan"><strong>(c)</strong>  has</span><br>
                             </div>
                             <div class="col-2">
-                            <input type="radio" name="cau1" value="a">  <strong>(d)</strong>  would<br>
+                            <input type="radio" name="cau5" @if(session('cau5') == "d") checked="" @endif value="d">  <strong>(d)</strong>  would<br>
                             </div>
                         </div>
 
                         <div class="pt-2 row">
                             <h4 class="col-2" style="max-width:8%">6. </h4>
                             <div class="col-2">
-                            <input type="radio" name="cau1" value="a">  <strong>(a)</strong>  out<br>
+                            <input type="radio" name="cau6" @if(session('cau6') == "a") checked="" @endif value="a">  <strong>(a)</strong>  out<br>
                             </div>
                             <div class="col-2">
-                            <input type="radio" name="cau1" value="a">  <strong>(b)</strong>  in<br>
+                            <input type="radio" name="cau6" @if(session('cau6') == "b") checked="" @endif value="b">  <strong>(b)</strong>  in<br>
                             </div>
                             <div class="col-2">
-                            <input type="radio" name="cau1" value="a">  <strong>(c)</strong>  down<br>
+                            <input type="radio" name="cau6" @if(session('cau6') == "c") checked="" @endif value="c">  <strong>(c)</strong>  down<br>
                             </div>
                             <div class="col-2">
-                            <input type="radio" name="cau1" value="a">  <strong>(d)</strong>  up<br>
+                            <input type="radio" name="cau6" @if(session('cau6') == "d") checked="" @endif value="d">  <span class="dapan"><strong>(d)</strong>  up</span><br>
                             </div>
                         </div>
 
                         <div class="pt-2 row">
                             <h4 class="col-2" style="max-width:8%">7. </h4>
                             <div class="col-2">
-                            <input type="radio" name="cau1" value="a">  <strong>(a)</strong>  quicken<br>
+                            <input type="radio" name="cau7" @if(session('cau7') == "a") checked="" @endif value="a">  <strong>(a)</strong>  quicken<br>
                             </div>
                             <div class="col-2">
-                            <input type="radio" name="cau1" value="a">  <strong>(b)</strong>  quick<br>
+                            <input type="radio" name="cau7" @if(session('cau7') == "b") checked="" @endif value="b">  <span class="dapan"><strong>(b)</strong>  quick</span><br>
                             </div>
                             <div class="col-2">
-                            <input type="radio" name="cau1" value="a">  <strong>(c)</strong>  quickly<br>
+                            <input type="radio" name="cau7" @if(session('cau7') == "c") checked="" @endif value="c">  <strong>(c)</strong>  quickly<br>
                             </div>
                             <div class="col-2">
-                            <input type="radio" name="cau1" value="a">  <strong>(d)</strong>  quickness<br>
+                            <input type="radio" name="cau7" @if(session('cau7') == "d") checked="" @endif value="d">  <strong>(d)</strong>  quickness<br>
                             </div>
                         </div>
 
                         <div class="pt-2 row">
                             <h4 class="col-2" style="max-width:8%">8. </h4>
                             <div class="col-2">
-                            <input type="radio" name="cau1" value="a">  <strong>(a)</strong>  landscape<br>
+                            <input type="radio" name="cau8" @if(session('cau8') == "a") checked="" @endif value="a">  <span class="dapan"><strong>(a)</strong>  landscape</span><br>
                             </div>
                             <div class="col-2">
-                            <input type="radio" name="cau1" value="a">  <strong>(b)</strong>  seascape<br>
+                            <input type="radio" name="cau8" @if(session('cau8') == "b") checked="" @endif value="b">  <strong>(b)</strong>  seascape<br>
                             </div>
                             <div class="col-2">
-                            <input type="radio" name="cau1" value="a">  <strong>(c)</strong>  cityscape<br>
+                            <input type="radio" name="cau8" @if(session('cau8') == "c") checked="" @endif value="c">  <strong>(c)</strong>  cityscape<br>
                             </div>
                             <div class="col-2">
-                            <input type="radio" name="cau1" value="a">  <strong>(d)</strong>  moonscape<br>
+                            <input type="radio" name="cau8" @if(session('cau8') == "d") checked="" @endif value="d">  <strong>(d)</strong>  moonscape<br>
                             </div>
                         </div>
 
                         <div class="pt-2 row">
                             <h4 class="col-2" style="max-width:8%">9. </h4>
                             <div class="col-2">
-                            <input type="radio" name="cau1" value="a">  <strong>(a)</strong>  do<br>
+                            <input type="radio" name="cau9" @if(session('cau9') == "a") checked="" @endif value="a">  <strong>(a)</strong>  do<br>
                             </div>
                             <div class="col-2">
-                            <input type="radio" name="cau1" value="a">  <strong>(b)</strong>  be<br>
+                            <input type="radio" name="cau9" @if(session('cau9') == "b") checked="" @endif value="b">  <span class="dapan"><strong>(b)</strong>  be</span><br>
                             </div>
                             <div class="col-2">
-                            <input type="radio" name="cau1" value="a">  <strong>(c)</strong>  have<br>
+                            <input type="radio" name="cau9" @if(session('cau9') == "c") checked="" @endif value="c">  <strong>(c)</strong>  have<br>
                             </div>
                             <div class="col-2">
-                            <input type="radio" name="cau1" value="a">  <strong>(d)</strong>  been<br>
+                            <input type="radio" name="cau9" @if(session('cau9') == "d") checked="" @endif value="d">  <strong>(d)</strong>  been<br>
                             </div>
                         </div>
 
                         <div class="pt-2 row">
                             <h4 class="col-2" style="max-width:8%">10. </h4>
                             <div class="col-2">
-                            <input type="radio" name="cau1" value="a">  <strong>(a)</strong>  proudly<br>
+                            <input type="radio" name="cau10" @if(session('cau10') == "a") checked="" @endif value="a">  <strong>(a)</strong>  proudly<br>
                             </div>
                             <div class="col-2">
-                            <input type="radio" name="cau1" value="a">  <strong>(b)</strong>  proud<br>
+                            <input type="radio" name="cau10" @if(session('cau10') == "b") checked="" @endif value="b">  <strong>(b)</strong>  proud<br>
                             </div>
                             <div class="col-2">
-                            <input type="radio" name="cau1" value="a">  <strong>(c)</strong>  pride<br>
+                            <input type="radio" name="cau10" @if(session('cau10') == "c") checked="" @endif value="c">  <span class="dapan"><strong>(c)</strong>  pride</span><br>
                             </div>
                             <div class="col-2">
-                            <input type="radio" name="cau1" value="a">  <strong>(d)</strong>  praise<br>
+                            <input type="radio" name="cau10" @if(session('cau10') == "d") checked="" @endif value="d">  <strong>(d)</strong>  praise<br>
                             </div>
                         </div>
 
                         <div class="pb-3"></div>
                         <div class="row pt-4 pb-2">
                             <div class="col-4">
-                            <button class="btn btn-icon btn-secondary" type="button">
+                            <button class="btn btn-icon btn-secondary" type="submit">
                                 <span class="btn-inner--icon"><i class="ni ni-check-bold"></i></span>
                                 <span class="btn-inner--text">Check done</span>
                             </button>
@@ -228,4 +230,30 @@ backward sort of thinking,” he said.
             
             <!--row-->
         </div>
+@endsection
+@section('script')
+@if(session('success'))
+@php $temp = session('success');$temp--; @endphp
+<script>
+Swal.fire({
+  title: '<strong>Thông tin</strong>',
+  icon: 'info',
+  html:
+    'Bạn đã trả lời đúng <b>{{$temp}}</b>/<b>10</b>',
+  showCloseButton: true,
+  showCancelButton: true,
+  focusConfirm: false,
+  confirmButtonText:
+    'Xem đáp án !',
+  confirmButtonAriaLabel: 'Thumbs up, great!',
+  cancelButtonText:
+    'Trả lời lại !',
+  cancelButtonAriaLabel: 'Thumbs down'
+}).then((result) => {
+  if (result.value) {
+    $('.dapan').css("color","red");
+  }
+})
+</script>
+@endif
 @endsection

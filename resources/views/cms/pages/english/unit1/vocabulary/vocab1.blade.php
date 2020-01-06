@@ -1,5 +1,7 @@
 @extends('cms.pages.layouts.layout')
 @section('content')
+<form style="display:contents" method="post" action="{{route('unit1.vocabulary.vocab1_post')}}">
+@csrf
 <div class="container">
     <div class="row" style="padding: 10px">
         <div class="col-12">
@@ -127,18 +129,18 @@
                     </div>
 
                     <div class="pt-3">
-                        <strong>1.</strong> The effects of climate change on humans and nature are <input type="text" />
+                        <strong>1.</strong> The effects of climate change on humans and nature are <input type="text" id="cau1" name="cau1" value="{{session('cau1')}}" />
                         . <br>
-                        <strong>2.</strong> We need to preserve the <input type="text" /> of wildlife because each
+                        <strong>2.</strong> We need to preserve the <input name="cau2" value="{{session('cau2')}}" id="cau2" type="text" /> of wildlife because each
                         species has an important role to play. <br>
-                        <strong>3.</strong> The increase in the earth’s temperature can cause <input type="text" />
+                        <strong>3.</strong> The increase in the earth’s temperature can cause <input name="cau3" id="cau3" value="{{session('cau3')}}" type="text" />
                         illnesses which can be dangerous to people. <br>
-                        <strong>4.</strong> Carbon dioxide is one of the primary <input type="text" /> that cause global
+                        <strong>4.</strong> Carbon dioxide is one of the primary <input name="cau4" value="{{session('cau4')}}"  id="cau4" type="text" /> that cause global
                         warming. <br>
                         <strong>5.</strong> Planting trees can contribute to reducing global warming as trees <input
-                            type="text" /> and absorb CO2 in the air. <br>
+                            type="text" name="cau5" id="cau5" value="{{session('cau5')}}" /> and absorb CO2 in the air. <br>
                         <strong>6.</strong> Climate change may lead to the extinction of many species and upset the
-                        <input type="text" /> . <br>
+                        <input type="text" name="cau6" id="cau6" value="{{session('cau6')}}" /> . <br>
                     </div>
 
                     <div class="pt-5" style="margin-bottom: 0;
@@ -186,33 +188,33 @@
                     <div class="pt-3 d-flex" style="    justify-content: space-between;">
                         <div class="d-flex">
                             <span><strong>1</strong> -  </span>
-                            <input width="30px"  style="width:30px;margin-left:0.5rem;" type="text">
+                            <input width="30px" name="cau1e2" id="cau1e2" value="{{session('cau1e2')}}"  style="width:30px;margin-left:0.5rem;" type="text">
                         </div>
                         <div class="d-flex">
                             <span><strong>2</strong> -  </span>
-                            <input width="30px"  style="width:30px;margin-left:0.5rem;" type="text">
+                            <input width="30px" name="cau2e2" id="cau2e2" value="{{session('cau2e2')}}"  style="width:30px;margin-left:0.5rem;" type="text">
                         </div>
                         <div class="d-flex">
                             <span><strong>3</strong> -  </span>
-                            <input width="30px"  style="width:30px;margin-left:0.5rem;" type="text">
+                            <input width="30px" name="cau3e2" id="cau3e2" value="{{session('cau3e2')}}" style="width:30px;margin-left:0.5rem;" type="text">
                         </div>
                         <div class="d-flex">
                             <span><strong>4</strong> -  </span>
-                            <input width="30px"  style="width:30px;margin-left:0.5rem;" type="text">
+                            <input width="30px" name="cau4e2" id="cau4e2" value="{{session('cau4e2')}}"  style="width:30px;margin-left:0.5rem;" type="text">
                         </div>
                         <div class="d-flex">
                             <span><strong>5</strong> -  </span>
-                            <input width="30px"  style="width:30px;margin-left:0.5rem;" type="text">
+                            <input width="30px" name="cau5e2" id="cau5e2" value="{{session('cau5e2')}}"  style="width:30px;margin-left:0.5rem;" type="text">
                         </div>
                         <div class="d-flex">
                             <span><strong>6</strong> -  </span>
-                            <input width="30px"  style="width:30px;margin-left:0.5rem;" type="text">
+                            <input width="30px" name="cau6e2" id="cau6e2" value="{{session('cau6e2')}}"  style="width:30px;margin-left:0.5rem;" type="text">
                         </div>
                     </div>
                     <div class="pb-5"></div>
                         <div class="row pt-4 pb-4">
                             <div class="col-4">
-                            <button class="btn btn-icon btn-secondary" type="button">
+                            <button class="btn btn-icon btn-secondary" type="submit">
                                 <span class="btn-inner--icon"><i class="ni ni-check-bold"></i></span>
                                 <span class="btn-inner--text">Check done</span>
                             </button>
@@ -237,4 +239,43 @@
 
         <!--row-->
     </div>
+    </form>
     @endsection
+    @section('script')
+@if(session('success'))
+@php $temp = session('success');$temp--; @endphp
+<script>
+Swal.fire({
+  title: '<strong>Thông tin</strong>',
+  icon: 'info',
+  html:
+    'Bạn đã trả lời đúng <b>{{$temp}}</b>/<b>12</b>',
+  showCloseButton: true,
+  showCancelButton: true,
+  focusConfirm: false,
+  confirmButtonText:
+    'Xem đáp án !',
+  confirmButtonAriaLabel: 'Thumbs up, great!',
+  cancelButtonText:
+    'Trả lời lại !',
+  cancelButtonAriaLabel: 'Thumbs down'
+}).then((result) => {
+  if (result.value) {
+    $('.dapan').css("color","red");
+    $('#cau1').val('catastrophic');
+    $('#cau2').val('diversity');
+    $('#cau3').val('heat-related')
+    $('#cau4').val('greenhouse gases');
+    $('#cau5').val('capture');
+    $('#cau6').val('ecological balance')
+    $('#cau1e2').val('e');
+    $('#cau2e2').val('c');
+    $('#cau3e2').val('f')
+    $('#cau4e2').val('b');
+    $('#cau5e2').val('d');
+    $('#cau6e2').val('a')
+  }
+})
+</script>
+@endif
+@endsection

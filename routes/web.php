@@ -25,34 +25,50 @@ Route::get('/unit1/reading/text2', function () {
     return view('cms.pages.english.unit1.reading.text2');
 })->name('unit1.reading.text2');
 
+Route::post('/unit1/reading/text2','EnglishController@unit1_text2')->name('unit1.reading.text2_post');
+
 Route::get('/unit1/vocabulary/vocab1', function () {
     return view('cms.pages.english.unit1.vocabulary.vocab1');
 })->name('unit1.vocabulary.vocab1');
+
+Route::post('/unit1/vocabulary/vocab1','EnglishController@unit1_vocab1')->name('unit1.vocabulary.vocab1_post');
 
 Route::get('/unit2/reading/text1', function () {
     return view('cms.pages.english.unit2.reading.text1');
 })->name('unit2.reading.text1');
 
+Route::post('/unit2/reading/text1','EnglishController@unit2_text1')->name('unit2.reading.text1_post');
+
 Route::get('/unit2/reading/text2', function () {
     return view('cms.pages.english.unit2.reading.text2');
 })->name('unit2.reading.text2');
+
+Route::post('/unit2/reading/text2','EnglishController@unit2_text2')->name('unit2.reading.text2_post');
 
 Route::get('/unit2/vocabulary/vocab1', function () {
     return view('cms.pages.english.unit2.vocabulary.vocab1');
 })->name('unit2.vocabulary.vocab1');
 
 
+Route::post('/unit2/vocabulary/vocab1','EnglishController@unit2_vocab1')->name('unit2.vocabulary.vocab1_post');
+
 Route::get('/unit3/reading/text1', function () {
     return view('cms.pages.english.unit3.reading.text1');
 })->name('unit3.reading.text1');
+
+Route::post('/unit3/reading/text1','EnglishController@unit3_text1')->name('unit3.reading.text1_post');
 
 Route::get('/unit3/reading/text2', function () {
     return view('cms.pages.english.unit3.reading.text2');
 })->name('unit3.reading.text2');
 
+Route::post('/unit3/reading/text2','EnglishController@unit3_text2')->name('unit3.reading.text2_post');
+
 Route::get('/unit3/vocabulary/vocab1', function () {
     return view('cms.pages.english.unit3.vocabulary.vocab1');
 })->name('unit3.vocabulary.vocab1');
+
+Route::post('/unit3/vocabulary/vocab1','EnglishController@unit3_vocab1')->name('unit3.vocabulary.vocab1_post');
 
 /**
  * Route cms page

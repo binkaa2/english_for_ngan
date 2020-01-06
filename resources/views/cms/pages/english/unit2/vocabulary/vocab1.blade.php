@@ -1,5 +1,7 @@
 @extends('cms.pages.layouts.layout')
 @section('content')
+<form style="display:contents" method="post" action="{{route('unit2.vocabulary.vocab1_post')}}">
+@csrf
 <div class="container">
     <div class="row" style="padding: 10px">
         <div class="col-12">
@@ -132,37 +134,37 @@
                     <div class="pt-5 d-flex" style="    justify-content: space-between;">
                         <div class="d-flex">
                             <span><strong>1</strong> -  </span>
-                            <input width="30px"  style="width:30px;margin-left:0.5rem;" type="text">
+                            <input width="30px" id="cau1" name="cau1" value="{{session('cau1')}}" style="width:30px;margin-left:0.5rem;" type="text">
                         </div>
                         <div class="d-flex">
                             <span><strong>2</strong> -  </span>
-                            <input width="30px"  style="width:30px;margin-left:0.5rem;" type="text">
+                            <input width="30px" id="cau2" name="cau2" value="{{session('cau2')}}" style="width:30px;margin-left:0.5rem;" type="text">
                         </div>
                         <div class="d-flex">
                             <span><strong>3</strong> -  </span>
-                            <input width="30px"  style="width:30px;margin-left:0.5rem;" type="text">
+                            <input width="30px" id="cau3" name="cau3" value="{{session('cau3')}}" style="width:30px;margin-left:0.5rem;" type="text">
                         </div>
                         <div class="d-flex">
                             <span><strong>4</strong> -  </span>
-                            <input width="30px"  style="width:30px;margin-left:0.5rem;" type="text">
+                            <input width="30px" id="cau4" name="cau4" value="{{session('cau4')}}"  style="width:30px;margin-left:0.5rem;" type="text">
                         </div>
                         <div class="d-flex">
                             <span><strong>5</strong> -  </span>
-                            <input width="30px"  style="width:30px;margin-left:0.5rem;" type="text">
+                            <input width="30px" id="cau5" name="cau5" value="{{session('cau5')}}" style="width:30px;margin-left:0.5rem;" type="text">
                         </div>
                         <div class="d-flex">
                             <span><strong>6</strong> -  </span>
-                            <input width="30px"  style="width:30px;margin-left:0.5rem;" type="text">
+                            <input width="30px" id="cau6" name="cau6" value="{{session('cau6')}}" style="width:30px;margin-left:0.5rem;" type="text">
                         </div>
                         <div class="d-flex">
                             <span><strong>7</strong> -  </span>
-                            <input width="30px"  style="width:30px;margin-left:0.5rem;" type="text">
+                            <input width="30px" id="cau7" name="cau7" value="{{session('cau7')}}" style="width:30px;margin-left:0.5rem;" type="text">
                         </div>
                     </div>
                     <div class="pb-5"></div>
                         <div class="row pt-4 pb-4">
                             <div class="col-4">
-                            <button class="btn btn-icon btn-secondary" type="button">
+                            <button class="btn btn-icon btn-secondary" type="submit">
                                 <span class="btn-inner--icon"><i class="ni ni-check-bold"></i></span>
                                 <span class="btn-inner--text">Check done</span>
                             </button>
@@ -187,4 +189,38 @@
 
         <!--row-->
     </div>
+    </form>
     @endsection
+
+    @section('script')
+@if(session('success'))
+@php $temp = session('success');$temp--; @endphp
+<script>
+Swal.fire({
+  title: '<strong>Thông tin</strong>',
+  icon: 'info',
+  html:
+    'Bạn đã trả lời đúng <b>{{$temp}}</b>/<b>7</b>',
+  showCloseButton: true,
+  showCancelButton: true,
+  focusConfirm: false,
+  confirmButtonText:
+    'Xem đáp án !',
+  confirmButtonAriaLabel: 'Thumbs up, great!',
+  cancelButtonText:
+    'Trả lời lại !',
+  cancelButtonAriaLabel: 'Thumbs down'
+}).then((result) => {
+  if (result.value) {
+    $('#cau1').val('g');
+    $('#cau2').val('a');
+    $('#cau3').val('d')
+    $('#cau4').val('f');
+    $('#cau5').val('b');
+    $('#cau6').val('e')
+    $('#cau7').val('c')
+  }
+})
+</script>
+@endif
+@endsection
