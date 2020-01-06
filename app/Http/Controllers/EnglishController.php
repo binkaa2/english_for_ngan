@@ -77,6 +77,16 @@ class EnglishController extends Controller
                                 ;
     }
 
+    public function unit1_text3(Request $request){
+        return redirect()->back()->with('success',"Please wait for us to review !")
+                                ->with('cau1',$request->cau1)
+                                ->with('cau2',$request->cau2)
+                                ->with('cau3',$request->cau3)
+                                ->with('cau4',$request->cau4)
+                                ->with('cau5',$request->cau5);
+    }
+
+
     public function unit1_vocab1(Request $request){
         $correct_answer = 1;
         if($request->cau1 == "catastrophic")

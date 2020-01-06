@@ -27,6 +27,13 @@ Route::get('/unit1/reading/text2', function () {
 
 Route::post('/unit1/reading/text2','EnglishController@unit1_text2')->name('unit1.reading.text2_post');
 
+
+Route::get('/unit1/reading/text3', function () {
+    return view('cms.pages.english.unit1.reading.text3');
+})->name('unit1.reading.text3');
+
+Route::post('/unit1/reading/text3','EnglishController@unit1_text3')->name('unit1.reading.text3_post');
+
 Route::get('/unit1/vocabulary/vocab1', function () {
     return view('cms.pages.english.unit1.vocabulary.vocab1');
 })->name('unit1.vocabulary.vocab1');

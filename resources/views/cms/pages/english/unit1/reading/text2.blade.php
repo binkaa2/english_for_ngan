@@ -242,7 +242,7 @@ However, New Zealand’s effort counts only a tip of the iceberg. So far, global
                                     <span class="btn-inner--icon"><i style="color:white;" class="ni ni-bold-left"></i></span>
                                     <span style="color:white;" class="btn-inner--text">Previous</span>
                                 </a>
-                                <a class="btn btn-icon btn-primary"  href="{{route('unit1.vocabulary.vocab1')}}" type="button">
+                                <a class="btn btn-icon btn-primary"  href="{{route('unit1.reading.text3')}}" type="button">
                                     <span style="color:white;" class="btn-inner--text">Next</span>
                                     <span class="btn-inner--icon"><i style="color:white;" class="ni ni-bold-right"></i></span>
                                 </a>

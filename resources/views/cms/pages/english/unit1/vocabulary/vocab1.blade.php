@@ -222,7 +222,7 @@
                             <div class="col-4 text-center"></div>
                             <div class="col-4">
                                 <div class="d-flex" style="justify-content: space-around;">
-                                <a class="btn btn-icon btn-primary" href="{{route('unit1.reading.text2')}}" type="button">
+                                <a class="btn btn-icon btn-primary" href="{{route('unit1.reading.text3')}}" type="button">
                                     <span class="btn-inner--icon"><i style="color:white;" class="ni ni-bold-left"></i></span>
                                     <span style="color:white;" class="btn-inner--text">Previous</span>
                                 </a>

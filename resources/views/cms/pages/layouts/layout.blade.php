@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="cms-admin/css/sweetalert2.min.css" type="text/css">
     <link rel="stylesheet" href="cms-admin/css/animate.min.css" type="text/css">
     <link rel="stylesheet" href="cms-admin/css/dataTables.bootstrap4.min.css" type="text/css">
-    <link rel="stylesheet" href="/css/base.css" type="text/css">
+    <link rel="stylesheet" href="/css/base.css?v=2" type="text/css">
     <style type="text/css">
         /* Chart.js */
         @keyframes chartjs-render-animation {

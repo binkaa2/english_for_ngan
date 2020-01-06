@@ -66,6 +66,9 @@
                                     <a href="{{route('unit1.reading.text2')}}">
                                         <h3><strong style="color:red;">2. </strong>TEXT 2</h3>
                                     </a>
+                                    <a href="{{route('unit1.reading.text3')}}">
+                                        <h3><strong style="color:red;">3. </strong>TEXT 3</h3>
+                                    </a>
                                 </div>
                             </div>
 
