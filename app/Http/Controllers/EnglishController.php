@@ -293,6 +293,12 @@ class EnglishController extends Controller
             $correct_answer++;
         if($request->cau7 == "J")
             $correct_answer++;
+            if($request->cau8 == "B")
+            $correct_answer++;
+            if($request->cau9 == "D")
+            $correct_answer++;
+            if($request->cau10 == "I")
+            $correct_answer++;
         return redirect()->back()->with('success',$correct_answer)
                                 ->with('cau1',$request->cau1)
                                 ->with('cau2',$request->cau2)
@@ -300,6 +306,9 @@ class EnglishController extends Controller
                                 ->with('cau4',$request->cau4)
                                 ->with('cau5',$request->cau5)
                                 ->with('cau6',$request->cau6)
-                                ->with('cau7',$request->cau7);
+                                ->with('cau7',$request->cau7)
+                                ->with('cau8',$request->cau8)
+                                ->with('cau9',$request->cau9)
+                                ->with('cau10',$request->cau10);
     }
 }
