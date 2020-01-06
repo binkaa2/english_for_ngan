@@ -45,6 +45,28 @@
                         </h1>
                     </div>
                     <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOneChild">
+                    <div class="card-block">
+                            <div class="collapse-accordion" id="accordion" role="tablist" aria-multiselectable="true">
+                                <div class="card" style="margin-bottom:0px !important;">
+                                    <div class="card-header" role="tab" id="headingOneChild1">
+                                        <h1 class="mb-0">
+                                            <a data-toggle="collapse" href="#collapseOneChild1" aria-expanded="false"
+                                                aria-controls="collapseOneChild1">
+                                                <strong>A.</strong> VOCABULARY
+                                            </a>
+                                        </h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="collapseOneChild1" class="collapse" role="tabpanel" aria-labelledby="headingOne1">
+                                <div style="padding-left:1.25rem;padding-bottom:1.25rem;padding-top:1.25rem">
+                                    <a href="{{route('unit1.vocabulary.vocab1')}}">
+                                        <h3><strong style="color:red;">1. </strong>VOCAB 1</h3>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="card-block">
                             <div class="collapse-accordion" id="accordion" role="tablist" aria-multiselectable="true">
                                 <div class="card" style="margin-bottom:0px !important;">
@@ -52,7 +74,7 @@
                                         <h1 class="mb-0">
                                             <a data-toggle="collapse" href="#collapseOneChild" aria-expanded="false"
                                                 aria-controls="collapseOneChild">
-                                                <strong>A.</strong> READING
+                                                <strong>B.</strong> READING
                                             </a>
                                         </h1>
                                     </div>
@@ -73,27 +95,7 @@
                             </div>
 
                         </div>
-                        <div class="card-block">
-                            <div class="collapse-accordion" id="accordion" role="tablist" aria-multiselectable="true">
-                                <div class="card" style="margin-bottom:0px !important;">
-                                    <div class="card-header" role="tab" id="headingOneChild1">
-                                        <h1 class="mb-0">
-                                            <a data-toggle="collapse" href="#collapseOneChild1" aria-expanded="false"
-                                                aria-controls="collapseOneChild1">
-                                                <strong>B.</strong> VOCABULARY
-                                            </a>
-                                        </h1>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="collapseOneChild1" class="collapse" role="tabpanel" aria-labelledby="headingOne1">
-                                <div style="padding-left:1.25rem;padding-bottom:1.25rem;padding-top:1.25rem">
-                                    <a href="{{route('unit1.vocabulary.vocab1')}}">
-                                        <h3><strong style="color:red;">1. </strong>VOCAB 1</h3>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
 
 
@@ -113,6 +115,29 @@
                         </h1>
                     </div>
                     <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwoChild">
+                
+                        <div class="card-block">
+                            <div class="collapse-accordion" id="accordion" role="tablist" aria-multiselectable="true">
+                                <div class="card" style="margin-bottom:0px !important;">
+                                    <div class="card-header" role="tab" id="headingTwoChild1">
+                                        <h1 class="mb-0">
+                                            <a data-toggle="collapse" href="#collapseTwoChild1" aria-expanded="false"
+                                                aria-controls="collapseTwoChild1">
+                                                <strong>A.</strong> VOCABULARY
+                                            </a>
+                                        </h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="collapseTwoChild1" class="collapse" role="tabpanel" aria-labelledby="headingTwo1">
+                                <div style="padding-left:1.25rem;padding-bottom:1.25rem;padding-top:1.25rem">
+                                    <a href="{{route('unit2.vocabulary.vocab1')}}">
+                                        <h3><strong style="color:red;">1. </strong>VOCAB 1</h3>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="card-block">
                             <div class="collapse-accordion" id="accordion" role="tablist" aria-multiselectable="true">
                                 <div class="card" style="margin-bottom:0px !important;">
@@ -120,7 +145,7 @@
                                         <h1 class="mb-0">
                                             <a data-toggle="collapse" href="#collapseTwoChild" aria-expanded="false"
                                                 aria-controls="collapseTwoChild">
-                                                <strong>A.</strong> READING
+                                                <strong>B.</strong> READING
                                             </a>
                                         </h1>
                                     </div>
@@ -137,27 +162,6 @@
                                 </div>
                             </div>
 
-                        </div>
-                        <div class="card-block">
-                            <div class="collapse-accordion" id="accordion" role="tablist" aria-multiselectable="true">
-                                <div class="card" style="margin-bottom:0px !important;">
-                                    <div class="card-header" role="tab" id="headingTwoChild1">
-                                        <h1 class="mb-0">
-                                            <a data-toggle="collapse" href="#collapseTwoChild1" aria-expanded="false"
-                                                aria-controls="collapseTwoChild1">
-                                                <strong>B.</strong> VOCABULARY
-                                            </a>
-                                        </h1>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="collapseTwoChild1" class="collapse" role="tabpanel" aria-labelledby="headingTwo1">
-                                <div style="padding-left:1.25rem;padding-bottom:1.25rem;padding-top:1.25rem">
-                                    <a href="{{route('unit2.vocabulary.vocab1')}}">
-                                        <h3><strong style="color:red;">1. </strong>VOCAB 1</h3>
-                                    </a>
-                                </div>
-                            </div>
                         </div>
                     </div>
 
@@ -179,6 +183,29 @@
                         </h1>
                     </div>
                     <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThreeChild">
+                
+                        <div class="card-block">
+                            <div class="collapse-accordion" id="accordion" role="tablist" aria-multiselectable="true">
+                                <div class="card" style="margin-bottom:0px !important;">
+                                    <div class="card-header" role="tab" id="headingThreeChild1">
+                                        <h1 class="mb-0">
+                                            <a data-toggle="collapse" href="#collapseThreeChild1" aria-expanded="false"
+                                                aria-controls="collapseThreeChild1">
+                                                <strong>A.</strong> VOCABULARY
+                                            </a>
+                                        </h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="collapseThreeChild1" class="collapse" role="tabpanel" aria-labelledby="headingThree1">
+                                <div style="padding-left:1.25rem;padding-bottom:1.25rem;padding-top:1.25rem">
+                                    <a href="{{route('unit3.vocabulary.vocab1')}}">
+                                        <h3><strong style="color:red;">1. </strong>VOCAB 1</h3>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="card-block">
                             <div class="collapse-accordion" id="accordion" role="tablist" aria-multiselectable="true">
                                 <div class="card" style="margin-bottom:0px !important;">
@@ -186,7 +213,7 @@
                                         <h1 class="mb-0">
                                             <a data-toggle="collapse" href="#collapseThreeChild" aria-expanded="false"
                                                 aria-controls="collapseThreeChild">
-                                                <strong>A.</strong> READING
+                                                <strong>B.</strong> READING
                                             </a>
                                         </h1>
                                     </div>
@@ -203,27 +230,6 @@
                                 </div>
                             </div>
 
-                        </div>
-                        <div class="card-block">
-                            <div class="collapse-accordion" id="accordion" role="tablist" aria-multiselectable="true">
-                                <div class="card" style="margin-bottom:0px !important;">
-                                    <div class="card-header" role="tab" id="headingThreeChild1">
-                                        <h1 class="mb-0">
-                                            <a data-toggle="collapse" href="#collapseThreeChild1" aria-expanded="false"
-                                                aria-controls="collapseThreeChild1">
-                                                <strong>B.</strong> VOCABULARY
-                                            </a>
-                                        </h1>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="collapseThreeChild1" class="collapse" role="tabpanel" aria-labelledby="headingThree1">
-                                <div style="padding-left:1.25rem;padding-bottom:1.25rem;padding-top:1.25rem">
-                                    <a href="{{route('unit3.vocabulary.vocab1')}}">
-                                        <h3><strong style="color:red;">1. </strong>VOCAB 1</h3>
-                                    </a>
-                                </div>
-                            </div>
                         </div>
                     </div>
 
