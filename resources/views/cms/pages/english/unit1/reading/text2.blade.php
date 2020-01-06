@@ -195,15 +195,15 @@ However, New Zealand’s effort counts only a tip of the iceberg. So far, global
                         </div>
                         <div class="d-flex" style="justify-content:space-around">
                             <div class="custom-control custom-radio">
-                                <input name="cau13" class="custom-control-input" @if(session('cau12') == "yes") checked="" @endif value="yes" id="cau13-yes" type="radio">
+                                <input name="cau13" class="custom-control-input" @if(session('cau13') == "yes") checked="" @endif value="yes" id="cau13-yes" type="radio">
                                 <label class="custom-control-label dapan" for="cau13-yes">YES</label>
                             </div>
                             <div class="custom-control custom-radio">
-                                <input name="cau13" class="custom-control-input" @if(session('cau12') == "no") checked="" @endif value="no" id="cau13-no" type="radio">
+                                <input name="cau13" class="custom-control-input" @if(session('cau13') == "no") checked="" @endif value="no" id="cau13-no" type="radio">
                                 <label class="custom-control-label" for="cau13-no">NO</label>
                             </div>
                             <div class="custom-control custom-radio">
-                                <input name="cau13" class="custom-control-input" @if(session('cau12') == "not_given") checked="" @endif value="not_given" id="cau13-not-given" type="radio">
+                                <input name="cau13" class="custom-control-input" @if(session('cau13') == "not_given") checked="" @endif value="not_given" id="cau13-not-given" type="radio">
                                 <label class="custom-control-label" for="cau13-not-given">NOT GIVEN</label>
                             </div>
                         </div>
