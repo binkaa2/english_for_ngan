@@ -3,7 +3,7 @@
 <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center"
     style="background-image: url('image/ngan2.png'); background-size: cover; background-position: center center;">
     <!-- Mask -->
-    <span class="mask bg-gradient-default opacity-8"></span>
+    <span class="mask  opacity-8" style="background: linear-gradient(87deg,rgb(230, 213, 229) 0,#1a174d 100%)!important;"></span>
     <!-- Header container -->
     <div class="container d-flex align-items-center">
         <div class="row">
