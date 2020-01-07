@@ -3,11 +3,13 @@
         <div class="row footer-row">
             <div class="col-lg-12 text-center">
                 <div>
-                    <a class="navbar-brand" href="#">
-                        <span class="nav-logo-text" style="font-size:20px">
-                        English for everyone <3
+                    <span class="nav-logo-text" style="font-size:20px">
+                            Contact us : <a href="englishcorner345@gmail.com">englishcorner345@gmail.com</a>
                          </span>
-                    </a>
+                         <br>
+                         <span>
+                            Fanpage : <a href="https://www.facebook.com/English-Corner-100557578148768">https://www.facebook.com/English-Corner-100557578148768</a>
+                         </span>
                 </div>
             </div>
         </div>

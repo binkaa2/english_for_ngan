@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="3km">
     <meta name="author" content="STDIO HUE">
-    <title>WEB ANH VAN</title>
+    <title>English Corner</title>
     <base href="{{ asset('')}}">
     <!-- Favicon -->
     <link rel="icon" href="https://demos.creative-tim.com/argon-dashboard-pro/assets/img/brand/favicon.png"

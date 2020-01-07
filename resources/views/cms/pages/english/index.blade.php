@@ -1,7 +1,7 @@
 @extends('cms.pages.layouts.layout')
 @section('content')
 <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center"
-    style="background-image: url('image/ngan.jpg'); background-size: cover; background-position: center center;">
+    style="background-image: url('image/ngan2.png'); background-size: cover; background-position: center center;">
     <!-- Mask -->
     <span class="mask bg-gradient-default opacity-8"></span>
     <!-- Header container -->
@@ -9,24 +9,25 @@
         <div class="row">
             <div class="col-md-12 col-lg-12 text-center">
                 <h1 class="display-2 text-white">
-                    Gioi thieu web hoc tieng anh
+                    ENGLISH CORNER
                 </h1>
-                <p class="lead text-white">
-                    Member : Ngan cagey
-                </p>
+               
                 <p class="text-white">
-                    bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                    bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                    <br> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                    <br> bla bla bla bla bla bla bla bla bla bla bla bla
-                    <br> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+                This reading module was designed as a supplementary material for Unit 1 (Global Warming), Unit 2 (Our World Heritage Site) and Unit 3 (Gender Equality) in the high school textbook, published by the Ministry of Education and Training. The module has sample reading texts and related vocabulary lists which consist of exercises for students to practice reading skills as well as activate their vocabulary. Students are supposed to control their own study and the teacher is supposed to be the guider.
+
                 </p>
+                <h3 class="text-white">
+                OBJECTIVES: By the end of the module, students will be able to:
+                </h3>
                 <p class="text-white">
-                    bla bla bla bla bla bla bla bla bla bla bla bla
+                practice reading skills - skimming, scanning, guessing<br>
+                further develop their knowledge of the topics presented in the textbook<br>
+                activate their vocabulary related to the topics presented<br>
+                enjoy learning English with software
                 </p>
-                <p class="text-white">
-                    bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                </p>
+                <h4 class="text-white">
+                TARGET LEARNERS: EFL Students of Upper Secondary Schools 
+                </h4>
             </div>
         </div>
     </div>

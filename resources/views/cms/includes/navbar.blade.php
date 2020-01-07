@@ -3,7 +3,7 @@
             <div>
                 <a class="" href="">
                 <span class="nav-logo-text animated animatedFadeInUp fadeInUp">
-                    English for everyone <3
+                    English Corner<3
                 </span>
                 </a>
                
